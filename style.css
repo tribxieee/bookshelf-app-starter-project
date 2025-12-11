@@ -1,0 +1,94 @@
+body {
+  background: #f5f7fa;
+  font-family: "Inter", sans-serif;
+}
+
+/* Card */
+.card {
+  border: none;
+  border-radius: 14px;
+}
+
+#bookForm input {
+  border-radius: 10px;
+}
+
+#bookForm button {
+  border-radius: 10px;
+}
+
+/* Filter buttons */
+#filter-unread,
+#filter-read {
+  border-radius: 30px;
+  padding: 6px 18px;
+  font-size: 0.9rem;
+}
+
+#filter-unread.active {
+  background: #e6efff;
+  border-color: #2f6fed;
+  color: #2f6fed;
+}
+
+#filter-read.active {
+  background: #e8ffe8;
+  border-color: #2ecc71;
+  color: #2ecc71;
+}
+
+/* Search */
+#searchInput {
+  border-radius: 10px;
+}
+
+.input-group .btn {
+  border-radius: 10px;
+}
+
+/* Book card */
+[data-testid="bookItem"] {
+  border-radius: 14px;
+  background: #fff;
+}
+
+[data-testid="bookItem"] h5 {
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+[data-testid="bookItem"] p {
+  margin-bottom: 2px;
+  color: #666;
+  font-size: 0.85rem;
+}
+
+/* Buttons */
+.btn-sm {
+  border-radius: 8px;
+  font-size: 0.78rem;
+  padding: 4px 8px;
+}
+
+.btn-success {
+  background-color: #2ecc71 !important;
+  border: none;
+}
+
+.btn-secondary {
+  background-color: #6c757d !important;
+}
+
+.btn-danger {
+  background-color: #e74c3c !important;
+}
+
+.btn-warning {
+  background-color: #f1c40f !important;
+}
+
+/* Remove hover lift from book cards */
+[data-testid="bookItem"].card:hover {
+  transform: none !important;
+  box-shadow: none !important;
+}
