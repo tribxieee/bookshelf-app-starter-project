@@ -92,9 +92,3 @@ body {
 .btn-warning {
   background-color: #f1c40f !important;
 }
-
-/* Remove hover lift from book cards */
-[data-testid="bookItem"].card:hover {
-  transform: none !important;
-  box-shadow: none !important;
-}
