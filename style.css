@@ -31,11 +31,11 @@ body {
   color: #2f6fed;
 }
 
-/* #filter-unread.active {
-  background: #e6efff;
-  border-color: #2f6fed;
-  color: #2f6fed;
-} */
+#filter-unread.active {
+  background: #f8d7da;
+  border-color: #d93030;
+  color: #d93030;
+}
 
 #filter-read.active {
   background: #e8ffe8;
