@@ -56,8 +56,8 @@ function createBookElement(book) {
   wrapper.setAttribute("data-bookid", book.id);
   wrapper.setAttribute("data-testid", "bookItem");
 
-  const statusBtnLabel = book.isComplete ? "Tandai Belum" : "Tandai Selesai";
-  const statusBtnClass = book.isComplete ? "btn-secondary" : "btn-success";
+  const statusBtnLabel = book.isComplete ? "Selesai" : "Tandai Selesai";
+  const statusBtnClass = book.isComplete ? "btn-success" : "btn-secondary";
 
   wrapper.innerHTML = `
     <h5 data-testid="bookItemTitle" class="mb-1">${escapeHtml(book.title)}</h5>
@@ -236,7 +236,7 @@ function toggleBookStatusWithConfirm(id) {
         book.isComplete = true;
         saveData();
         renderBooks();
-        Swal.fire({ icon: "success", title: "Tandai selesai", timer: 900, showConfirmButton: false });
+        Swal.fire({ icon: "success", title: "Selesai", timer: 900, showConfirmButton: false });
       }
     });
   } else {
@@ -244,7 +244,7 @@ function toggleBookStatusWithConfirm(id) {
     book.isComplete = false;
     saveData();
     renderBooks();
-    Swal.fire({ icon: "info", title: "Tandai belum selesai", timer: 700, showConfirmButton: false });
+    Swal.fire({ icon: "info", title: "Belum Selesai", timer: 700, showConfirmButton: false });
   }
 }
 
@@ -269,7 +269,7 @@ btnRead.addEventListener("click", () => {
 });
 
 function setActiveFilterButton(filter) {
-  // simple active toggling (don't mess too much with outline classes)
+  // simple active toggling
   [btnAll, btnUnread, btnRead].forEach(b => b.classList.remove("active"));
   if (filter === "all") btnAll.classList.add("active");
   else if (filter === "unread") btnUnread.classList.add("active");
