@@ -1,6 +1,6 @@
 body {
   background: #f5f7fa;
-  font-family: "Inter", sans-serif;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 /* Card */
@@ -19,17 +19,23 @@ body {
 
 /* Filter buttons */
 #filter-unread,
-#filter-read {
+#filter-read, #filter-all {
   border-radius: 30px;
   padding: 6px 18px;
   font-size: 0.9rem;
 }
 
-#filter-unread.active {
+#filter-all.active {
   background: #e6efff;
   border-color: #2f6fed;
   color: #2f6fed;
 }
+
+/* #filter-unread.active {
+  background: #e6efff;
+  border-color: #2f6fed;
+  color: #2f6fed;
+} */
 
 #filter-read.active {
   background: #e8ffe8;
@@ -39,7 +45,7 @@ body {
 
 /* Search */
 #searchInput {
-  border-radius: 10px;
+  border-radius: 0px;
 }
 
 .input-group .btn {

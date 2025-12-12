@@ -26,7 +26,11 @@
 
     <!-- FILTER NAV -->
     <div class="d-flex justify-content-center gap-3 mb-4">
-      <button class="btn btn-outline-primary active" id="filter-unread">
+      <button class="btn btn-outline-primary" id="filter-all">
+        <i class="bi bi-grid"></i> Semua Buku
+      </button>
+
+      <button class="btn btn-outline-danger active" id="filter-unread">
         <i class="bi bi-journal-bookmark"></i> Belum Selesai Dibaca
       </button>
 
@@ -76,7 +80,7 @@
             <i class="bi bi-search"></i>
           </span>
           <input type="text" id="searchInput" class="form-control" placeholder="Cari berdasarkan judul..." data-testid="searchBookTitleInput">
-          <button class="btn btn-dark" id="searchButton" data-testid="searchSubmitButton">
+          <button class="btn btn-primary" id="searchButton" data-testid="searchSubmitButton">
             <i class="bi bi-arrow-right"></i>
           </button>
         </div>
@@ -84,7 +88,7 @@
         <h5 class="fw-semibold mb-3">Daftar Buku</h5>
 
         <div id="incompleteBookList" data-testid="incompleteBookList" class="row g-3"></div>
-        <div id="completeBookList" data-testid="completeBookList" class="row g-3 mt-4"></div>
+        <div id="completeBookList" data-testid="completeBookList" class="row g-3 mt-2"></div>
 
       </div>
     </div>
