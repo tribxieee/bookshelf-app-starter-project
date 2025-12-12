@@ -22,77 +22,71 @@
 </head>
 <body class="bg-light">
 
-  <div class="container py-4">
+<div class="container py-4">
 
-    <!-- FILTER NAV -->
-    <div class="d-flex justify-content-center gap-3 mb-4">
-      <button class="btn btn-outline-primary" id="filter-all">
-        <i class="bi bi-grid"></i> Semua Buku
-      </button>
+  <!-- FILTER NAV -->
+  <div class="d-flex justify-content-center gap-3 mb-4">
+    <button class="btn btn-outline-primary" id="filter-all">
+      <i class="bi bi-grid"></i> Semua Buku
+    </button>
+    <button class="btn btn-outline-danger active" id="filter-unread">
+      <i class="bi bi-journal-bookmark"></i> Belum Selesai Dibaca
+    </button>
+    <button class="btn btn-outline-success" id="filter-read">
+      <i class="bi bi-check-circle"></i> Selesai Dibaca
+    </button>
+  </div>
 
-      <button class="btn btn-outline-danger active" id="filter-unread">
-        <i class="bi bi-journal-bookmark"></i> Belum Selesai Dibaca
-      </button>
+  <div class="row g-4">
 
-      <button class="btn btn-outline-success" id="filter-read">
-        <i class="bi bi-check-circle"></i> Selesai Dibaca
-      </button>
+    <!-- FORM -->
+    <div class="col-md-4">
+      <div class="card shadow-sm p-4">
+        <h4 class="mb-3 fw-bold">Tambah Buku Baru</h4>
+
+        <form id="bookForm" data-testid="bookForm">
+          <div class="mb-3">
+            <input type="text" id="bookFormTitle" class="form-control" placeholder="Judul" data-testid="bookFormTitleInput" required>
+          </div>
+          <div class="mb-3">
+            <input type="text" id="bookFormAuthor" class="form-control" placeholder="Penulis" data-testid="bookFormAuthorInput" required>
+          </div>
+          <div class="mb-3">
+            <input type="number" id="bookFormYear" class="form-control" placeholder="Tahun" data-testid="bookFormYearInput" required>
+          </div>
+          <div class="form-check form-switch mb-3">
+            <input class="form-check-input" type="checkbox" id="bookFormIsComplete" data-testid="bookFormIsCompleteCheckbox">
+            <label class="form-check-label">Selesai Dibaca?</label>
+          </div>
+          <button class="btn btn-primary w-100" type="submit" data-testid="bookFormSubmitButton">
+            <i class="bi bi-plus-circle"></i> Simpan Buku
+          </button>
+        </form>
+      </div>
     </div>
 
-    <div class="row g-4">
+    <!-- LIST BUKU -->
+    <div class="col-md-8">
 
-      <!-- FORM -->
-      <div class="col-md-4">
-        <div class="card shadow-sm p-4">
-          <h4 class="mb-3 fw-bold">Tambah Buku Baru</h4>
+      <!-- SEARCH -->
+      <form id="searchBook" data-testid="searchBookForm" class="input-group mb-4">
+        <span class="input-group-text bg-white">
+          <i class="bi bi-search"></i>
+        </span>
+        <input type="text" id="searchBookTitle" class="form-control" placeholder="Cari berdasarkan judul..." data-testid="searchBookFormTitleInput">
+        <button class="btn btn-primary" type="submit" data-testid="searchBookFormSubmitButton">
+          <i class="bi bi-arrow-right"></i>
+        </button>
+      </form>
 
-          <form id="bookForm">
-            <div class="mb-3">
-              <input type="text" id="title" class="form-control" placeholder="Judul" data-testid="titleInput" required>
-            </div>
+      <h5 class="fw-semibold mb-3">Daftar Buku</h5>
 
-            <div class="mb-3">
-              <input type="text" id="author" class="form-control" placeholder="Penulis" data-testid="authorInput" required>
-            </div>
+      <div id="incompleteBookList" data-testid="incompleteBookList" class="row g-3 mb-3"></div>
+      <div id="completeBookList" data-testid="completeBookList" class="row g-3"></div>
 
-            <div class="mb-3">
-              <input type="number" id="year" class="form-control" placeholder="Tahun" data-testid="yearInput" required>
-            </div>
-
-            <div class="form-check form-switch mb-3">
-              <input class="form-check-input" type="checkbox" id="isComplete" data-testid="isCompleteInput">
-              <label class="form-check-label">Selesai Dibaca?</label>
-            </div>
-
-            <button class="btn btn-primary w-100" type="submit" data-testid="bookFormSubmitButton">
-              <i class="bi bi-plus-circle"></i> Simpan Buku
-            </button>
-          </form>
-        </div>
-      </div>
-
-      <!-- LIST BUKU -->
-      <div class="col-md-8">
-
-        <!-- SEARCH -->
-        <div class="input-group mb-4">
-          <span class="input-group-text bg-white">
-            <i class="bi bi-search"></i>
-          </span>
-          <input type="text" id="searchInput" class="form-control" placeholder="Cari berdasarkan judul..." data-testid="searchBookTitleInput">
-          <button class="btn btn-primary" id="searchButton" data-testid="searchSubmitButton">
-            <i class="bi bi-arrow-right"></i>
-          </button>
-        </div>
-
-        <h5 class="fw-semibold mb-3">Daftar Buku</h5>
-
-        <div id="incompleteBookList" data-testid="incompleteBookList" class="row g-3 mb-3"></div>
-        <div id="completeBookList" data-testid="completeBookList" class="row g-3"></div>
-
-      </div>
     </div>
   </div>
+</div>
 
 </body>
 </html>

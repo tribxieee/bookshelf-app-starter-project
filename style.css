@@ -1,94 +1,48 @@
-body {
-  background: #f5f7fa;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+body { 
+    background: #f5f7fa; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; 
 }
-
-/* Card */
-.card {
-  border: none;
-  border-radius: 14px;
+.card { 
+    border: none; border-radius: 14px; 
 }
-
-#bookForm input {
-  border-radius: 10px;
+#bookForm input, #bookForm button { 
+    border-radius: 10px; 
 }
-
-#bookForm button {
-  border-radius: 10px;
+#filter-unread, #filter-read, #filter-all { 
+    border-radius: 30px; padding: 6px 18px; font-size: 0.9rem; 
 }
-
-/* Filter buttons */
-#filter-unread,
-#filter-read, #filter-all {
-  border-radius: 30px;
-  padding: 6px 18px;
-  font-size: 0.9rem;
+#filter-all.active { 
+    background: #e6efff; border-color: #2f6fed; color: #2f6fed; 
 }
-
-#filter-all.active {
-  background: #e6efff;
-  border-color: #2f6fed;
-  color: #2f6fed;
+#filter-unread.active { 
+    background: #f8d7da; border-color: #d93030; color: #d93030; 
 }
-
-#filter-unread.active {
-  background: #f8d7da;
-  border-color: #d93030;
-  color: #d93030;
+#filter-read.active { 
+    background: #e8ffe8; border-color: #2ecc71; color: #2ecc71; 
 }
-
-#filter-read.active {
-  background: #e8ffe8;
-  border-color: #2ecc71;
-  color: #2ecc71;
+.input-group .btn { 
+    border-radius: 10px; 
 }
-
-/* Search */
-#searchInput {
-  border-radius: 0px;
+[data-testid="bookItem"] { 
+    border-radius: 14px; background: #fff; 
 }
-
-.input-group .btn {
-  border-radius: 10px;
+[data-testid="bookItem"] h3 { 
+    font-weight: 600; margin-bottom: 6px; 
 }
-
-/* Book card */
-[data-testid="bookItem"] {
-  border-radius: 14px;
-  background: #fff;
+[data-testid="bookItem"] p { 
+    margin-bottom: 2px; color: #666; font-size: 0.85rem; 
 }
-
-[data-testid="bookItem"] h5 {
-  font-weight: 600;
-  margin-bottom: 6px;
+.btn-sm { 
+    border-radius: 8px; font-size: 0.78rem; padding: 4px 8px; 
 }
-
-[data-testid="bookItem"] p {
-  margin-bottom: 2px;
-  color: #666;
-  font-size: 0.85rem;
+.btn-success { 
+    background-color: #2ecc71 !important; border: none; 
 }
-
-/* Buttons */
-.btn-sm {
-  border-radius: 8px;
-  font-size: 0.78rem;
-  padding: 4px 8px;
+.btn-secondary { 
+    background-color: #6c757d !important; 
 }
-
-.btn-success {
-  background-color: #2ecc71 !important;
-  border: none;
+.btn-danger { 
+    background-color: #e74c3c !important; 
 }
-
-.btn-secondary {
-  background-color: #6c757d !important;
-}
-
-.btn-danger {
-  background-color: #e74c3c !important;
-}
-
-.btn-warning {
-  background-color: #f1c40f !important;
+.btn-warning { 
+    background-color: #f1c40f !important; 
 }
